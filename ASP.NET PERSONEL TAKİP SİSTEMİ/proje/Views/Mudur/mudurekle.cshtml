@@ -1,0 +1,111 @@
+﻿
+@{
+    ViewBag.Title = "mudurekle";
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/Content/Style/assets/css/güncelle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+
+
+            @using (Html.BeginForm("mudurekle", "Mudur", FormMethod.Post))
+
+            {
+                <div class="formbold-form-title">
+                    <h2 class=""></h2>
+
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="kullanıcıAdı" class="formbold-form-label">
+                            Kullanıcı Adı
+                        </label>
+                        <input type="text"
+                               name="kullanıcıAdı"
+                               id="kullanıcıAdı"
+                               class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="sifre" class="formbold-form-label"> Şifre </label>
+                        <input type="text"
+                               name="sifre"
+                               id="sifre"
+                               class="formbold-form-input" />
+                    </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="ad" class="formbold-form-label"> Ad </label>
+                        <input type="text"
+                               name="ad"
+                               id="ad"
+                               class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="soyad" class="formbold-form-label"> Soyad </label>
+                        <input type="text"
+                               name="soyad"
+                               id="soyad"
+                               class="formbold-form-input" />
+                    </div>
+                </div>
+
+                
+                    <div class="formbold-mb-3">
+                        <label for="eposta" class="formbold-form-label">
+                            Eposta
+                        </label>
+                        <input type="text"
+                               name="eposta"
+                               id="eposta"
+                               class="formbold-form-input"
+                                />
+                    </div>
+                
+                
+                <div class="formbold-mb-3">
+                    <label for="yetkiSeviyesi" class="formbold-form-label">
+                        Yetki Seviyesi
+                    </label>
+                    <input type="text"
+                           name="yetkiSeviyesi"
+                           id="yetkiSeviyesi"
+                           class="formbold-form-input" />
+
+                </div>
+                
+
+
+
+
+
+
+
+
+                <button class="formbold-btn" value="Kaydet">Kaydet</button>
+            }
+        </div>
+    </div>
+
+
+</body>
+</html>
+

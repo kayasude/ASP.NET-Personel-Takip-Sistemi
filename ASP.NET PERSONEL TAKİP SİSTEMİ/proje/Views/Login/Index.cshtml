@@ -1,0 +1,53 @@
+﻿
+@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="Restorant,menü ">
+2
+    <title>Panel Giriş</title>
+
+    <link href="~/Content/Style/assets/css/girisstyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="login-page">
+        <div class="container">
+
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post ,new { @class = "form-login" }))
+
+            {
+                <h2 class="form-login-heading">F O O D E E</h2>
+                <div class="login-wrap">
+                    <input type="radio"id="yetkiSeviyesi" name="yetkiSeviyesi" class="yetkiSeviyesi" value="YÖNETİCİ" />YÖNETİCİ
+                    <input type="radio" id="yetkiSeviyesi" name="yetkiSeviyesi" class="yetkiSeviyesi" value="MÜDÜR" />MÜDÜR
+                    <input type="text" id="kullanıcıAdı" class="form-control" name="kullanıcıAdı" placeholder="Kullanıcı Adı" autofocus>
+                    <br>
+                    <input type="password" id="sifre" class="form-control" name="sifre" placeholder="Şifre">
+                    <label class="checkbox">
+                        <span class="pull-right">
+
+
+                        </span>
+                    </label>
+                    <button class="btn btn-theme btn-block" href="#" type="submit"><i class="fa fa-lock"></i> GİRİŞ YAP</button>
+
+
+                </div>
+            }
+
+            </div>
+    </div>
+
+    <script>
+        $.backstretch("assets/img/rest2.jpg", { speed: 250 });
+    </script>
+
+
+</body>
+</html>

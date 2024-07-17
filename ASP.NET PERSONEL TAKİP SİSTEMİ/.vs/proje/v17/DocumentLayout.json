@@ -1,0 +1,209 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|c:\\users\\sudek\\onedrive\\masa\u00FCst\u00FC\\personel tak\u0130p otomasyonu\\proje 21.05.2024\\proje\\runjobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\runjobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\models\\responseapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\models\\responseapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\views\\giriscikis\\giriscikis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\views\\giriscikis\\giriscikis.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\controllers\\giriscikiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\controllers\\giriscikiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\controllers\\personelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\controllers\\personelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\views\\personel\\personelbilgisi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\views\\personel\\personelbilgisi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\views\\personel\\personelgetir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\views\\personel\\personelgetir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\views\\personelbilgi\\dosyagetir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\views\\personelbilgi\\dosyagetir.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4079C3EB-C9D6-4FBD-9554-EF3A11597602}|proje\\proje.csproj|solutionrelative:proje\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "proje\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "proje\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T19:01:46.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "proje\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "proje\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T16:52:48.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "personelbilgisi.cshtml",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\Personel\\personelbilgisi.cshtml",
+              "RelativeDocumentMoniker": "proje\\Views\\Personel\\personelbilgisi.cshtml",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\Personel\\personelbilgisi.cshtml",
+              "RelativeToolTip": "proje\\Views\\Personel\\personelbilgisi.cshtml",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAHwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T16:50:06.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "giriscikis.cshtml",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\giriscikis\\giriscikis.cshtml",
+              "RelativeDocumentMoniker": "proje\\Views\\giriscikis\\giriscikis.cshtml",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\giriscikis\\giriscikis.cshtml",
+              "RelativeToolTip": "proje\\Views\\giriscikis\\giriscikis.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T16:49:57.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "giriscikisController.cs",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Controllers\\giriscikisController.cs",
+              "RelativeDocumentMoniker": "proje\\Controllers\\giriscikisController.cs",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Controllers\\giriscikisController.cs",
+              "RelativeToolTip": "proje\\Controllers\\giriscikisController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwDIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T16:49:12.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResponseApi.cs",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Models\\ResponseApi.cs",
+              "RelativeDocumentMoniker": "proje\\Models\\ResponseApi.cs",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Models\\ResponseApi.cs",
+              "RelativeToolTip": "proje\\Models\\ResponseApi.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAD4vwgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T14:01:32.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RunJobs.cs",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\RunJobs.cs",
+              "RelativeDocumentMoniker": "proje\\RunJobs.cs",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\RunJobs.cs",
+              "RelativeToolTip": "proje\\RunJobs.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T14:00:51.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DosyaGetir.cshtml",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\PersonelBilgi\\DosyaGetir.cshtml",
+              "RelativeDocumentMoniker": "proje\\Views\\PersonelBilgi\\DosyaGetir.cshtml",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\PersonelBilgi\\DosyaGetir.cshtml",
+              "RelativeToolTip": "proje\\Views\\PersonelBilgi\\DosyaGetir.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAF8AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T19:09:30.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "personelgetir.cshtml",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\Personel\\personelgetir.cshtml",
+              "RelativeDocumentMoniker": "proje\\Views\\Personel\\personelgetir.cshtml",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Views\\Personel\\personelgetir.cshtml",
+              "RelativeToolTip": "proje\\Views\\Personel\\personelgetir.cshtml",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAUwI8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T19:09:43.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersonelController.cs",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Controllers\\PersonelController.cs",
+              "RelativeDocumentMoniker": "proje\\Controllers\\PersonelController.cs",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Controllers\\PersonelController.cs",
+              "RelativeToolTip": "proje\\Controllers\\PersonelController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowDUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T19:17:23.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Global.asax.cs",
+              "RelativeDocumentMoniker": "proje\\Global.asax.cs",
+              "ToolTip": "C:\\Users\\sudek\\OneDrive\\Masa\u00FCst\u00FC\\PERSONEL TAK\u0130P OTOMASYONU\\proje 21.05.2024\\proje\\Global.asax.cs",
+              "RelativeToolTip": "proje\\Global.asax.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAcwBMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T14:00:22.031Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

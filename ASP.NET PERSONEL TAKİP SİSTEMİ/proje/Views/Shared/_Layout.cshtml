@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - PERSONELTAKİPSİSTEMİ</title>
+	<link rel="stylesheet" href="~/Content/Style/assets/css/tablo.css" asp-append-version="true" />
+	<link href="~/Content/Style/assets/css/layout.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+		  rel="stylesheet">
+
+	<link rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+			</div>
+			<div class="p-4">
+				<h1>
+
+					<a href="index.html" class="logo">
+						FOODEE <span>
+
+						</span>
+					</a>
+				</h1>
+
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="@Url.Action("firmabilgisi","Firma")"><span class="fa fa-home mr-3"></span> Firma Bilgisi</a>
+                    </li>
+                    @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                    {
+                        <li>
+                            <a href="@Url.Action("personelbilgisi", "Personel")"><span class="fa fa-home mr-3"></span> Personel Bilgisi</a>
+                        </li>
+                    }
+
+
+
+
+
+                    <li>
+                        <a href="@Url.Action("subebilgisi", "Subeler")"><span class="fa fa-user mr-3"></span> Şube Bilgisi</a>
+                        <ul class="list-unstyled components">
+
+
+                            @if (ViewBag.AllowKonyaTable != null && (bool)ViewBag.AllowKonyaTable || ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                            {
+                                <li>
+                                    <a href="@Url.Action("konyasubesi", "Subeler")"><span class="fa fa-user mr-3"></span> Konya Şubesi Personelleri</a>
+                                </li>
+                            }
+
+                            @if (ViewBag.AllowNevsehirTable != null && (bool)ViewBag.AllowNevsehirTable || ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                            {
+                                <li>
+                                    <a href="@Url.Action("nevsehirsubesi", "Subeler")"><span class="fa fa-user mr-3"></span> Nevşehir Şubesi Personelleri</a>
+                                </li>
+                            }
+
+                            @if (ViewBag.AllowAnkaraTable != null && (bool)ViewBag.AllowAnkaraTable || ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                            {
+                                <li>
+                                    <a href="@Url.Action("ankarasubesi", "Subeler")"><span class="fa fa-user mr-3"></span> Ankara Şubesi Personelleri</a>
+                                </li>
+                            }
+                            @if (ViewBag.AllowIstanbulTable != null && (bool)ViewBag.AllowIstanbulTable || ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                            {
+                                <li>
+                                    <a href="@Url.Action("istanbulsubesi", "Subeler")"><span class="fa fa-user mr-3"></span> İstanbul Şubesi Personelleri</a>
+                                </li>
+                            }
+
+
+                        </ul>
+                    </li>
+                    @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                    {
+                        <li>
+                            <a href="@Url.Action("logkayit", "Log")"><span class="fa fa-home mr-3"></span> Log Bilgisi</a>
+                        </li>
+                    }
+                    @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                    {
+                        <li>
+                            <a href="@Url.Action("mudurbilgisi", "Mudur")"><span class="fa fa-home mr-3"></span> Müdür Bilgisi</a>
+                        </li>
+                    }
+                    @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                    {
+                        <li>
+                            <a href="@Url.Action("mailgonder", "Mail")"><span class="fa fa-home mr-3"></span> Mail Gönder</a>
+                        </li>
+                    }
+                    @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                    {
+                        <li>
+                            <a href="@Url.Action("giriscikis", "giriscikis")"><span class="fa fa-home mr-3"></span>Giriş/Çıkış</a>
+                        </li>
+                    }
+
+
+                </ul>
+
+
+
+			</div>
+		</nav>			</div>
+
+		
+
+
+
+
+		<div class="container">
+			<main role="main" class="pb-3">
+				@RenderBody()
+			</main>
+		</div>
+</body>
+
+
+</html>
+
+

@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "subeekle";
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/Content/Style/assets/css/güncelle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+
+
+            @using (Html.BeginForm("subeekle", "Guncelle", FormMethod.Post))
+
+            {
+                <div class="formbold-form-title">
+                    <h2 class=""></h2>
+
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="subeAdi" class="formbold-form-label">
+                            Şube Adı
+                        </label>
+                        <input type="text"
+                               name="subeAdi"
+                               id="subeAdi"
+                               class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="subeAdresi" class="formbold-form-label"> Şube Adresi </label>
+                        <input type="text"
+                               name="subeAdresi"
+                               id="subeAdresi"
+                               class="formbold-form-input" />
+                    </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="subeSehri" class="formbold-form-label"> Şube Şehri</label>
+                        <input type="text"
+                               name="subeSehri"
+                               id="subeSehri"
+                               class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="subeTelefonu" class="formbold-form-label"> Şube Telefonu </label>
+                        <input type="text"
+                               name="subeTelefonu"
+                               id="subeTelefonu"
+                               class="formbold-form-input" />
+                    </div>
+                </div>
+
+                
+                    <div class="formbold-mb-3">
+                        <label for="subeacilis_kapanis" class="formbold-form-label">
+                            Şube Açılış / Kapanış
+                        </label>
+                        <input type="text"
+                               name="subeacilis_kapanis"
+                               id="subeacilis_kapanis"
+                               class="formbold-form-input"
+                                />
+                    </div>
+                
+                
+                
+
+
+
+
+
+
+
+                <button class="formbold-btn" value="Kaydet">Kaydet</button>
+            }
+        </div>
+    </div>
+
+
+</body>
+</html>
+

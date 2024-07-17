@@ -1,0 +1,143 @@
+﻿@model EntitiyLayer.Concrete.Entitiy.personel
+@{
+    ViewBag.Title = "personelgetir";
+}
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/Content/Style/assets/css/güncelle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- Author: FormBold Team
+     Learn More: https://formbold.com
+    <div class="formbold-form-wrapper">
+
+
+    <
+    form method="POST">-->
+    <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+
+            @using (Html.BeginForm("personelguncelle", "Guncelle", FormMethod.Post))
+
+            {
+                @Html.HiddenFor(model => model.personelID)
+            <div>
+                <div class="profile-container">
+                    <img class="profile-picture" src="data:image/jpeg;base64,@Model.fotograf" alt="Profil Resmi">
+                </div>
+
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="firstname" class="formbold-form-label">
+                            Ad
+                        </label>
+                        @Html.TextBoxFor(p1 => p1.ad, new { @class = "formbold-form-input" })
+
+                    </div>
+                    <div>
+                        <label for="firstname" class="formbold-form-label">
+                            Soyad
+                        </label>
+
+                        @Html.TextBoxFor(p1 => p1.soyad, new { @class = "formbold-form-input" })
+                    </div>
+
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="email" class="formbold-form-label">
+
+                            Telefon
+                        </label>
+                        @Html.TextBoxFor(p1 => p1.telefon, new { @class = "formbold-form-input" })
+                    </div>
+                    @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                    {
+                        <div>
+                            <label for="phone" class="formbold-form-label">
+
+                                Adres
+                            </label>
+                            @Html.TextBoxFor(p1 => p1.adres, new { @class = "formbold-form-input" })
+                        </div>}
+
+                    else
+                    {
+                        <div>
+                            <label for="phone" class="formbold-form-label">
+
+                                Adres
+                            </label>
+                            @Html.TextBoxFor(p1 => p1.adres, new { @class = "formbold-form-input", @readonly = "readonly" })
+                        </div>}
+                </div>
+
+                <div class="formbold-mb-3">
+                    <label for="address" class="formbold-form-label">
+                        Cinsiyet
+
+                    </label>
+                    @Html.TextBoxFor(p1 => p1.cinsiyet, new { @class = "formbold-form-input" })
+                </div>
+                <div class="formbold-mb-3">
+                    <label for="address" class="formbold-form-label">
+                        Pozisyon
+
+                    </label>
+                    @Html.TextBoxFor(p1 => p1.pozisyon, new { @class = "formbold-form-input" })
+                </div>
+                <div class="formbold-mb-3">
+                    <label for="address" class="formbold-form-label">
+                        Firma Giriş Tarihi
+
+                    </label>
+                    @Html.TextBoxFor(p1 => p1.firmaGirisCikis, new { @class = "formbold-form-input" })
+                </div>
+                <div class="formbold-mb-3">
+                    <label for="address" class="formbold-form-label">
+                        Maas
+
+                    </label>
+                    @Html.TextBoxFor(p1 => p1.maas, new { @class = "formbold-form-input" })
+                </div>
+                <div>
+                    <label for="lastname" class="formbold-form-label">
+                        T.C.
+
+                    </label>
+                    @Html.TextBoxFor(p1 => p1.tc, new { @class = "formbold-form-input" })
+                </div>
+
+
+
+            </div>
+                <button class="formbold-btn" value="Kaydet">Kaydet</button>
+
+
+            }
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+

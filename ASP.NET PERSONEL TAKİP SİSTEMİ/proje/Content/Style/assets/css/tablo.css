@@ -1,0 +1,166 @@
+﻿
+body {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+p {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+}
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* İstediğiniz boşluğa göre ayarlayabilirsiniz */
+}
+#searchInput {
+    padding: 5px 5px; /* Arama kutusu içeriği için padding */
+    border: 1px solid #ccc; /* Kenarlık */
+    border-radius: 20px; /* Yumuşak kenarlar */
+    width: 200px; /* Arama kutusu genişliği */
+    outline: none; /* Odak çerçevesini kaldır */
+}
+
+    .search-container input[type="text"] {
+        margin-left: 10px; /* Input ile diğer içerik arasındaki boşluğu ayarlayın */
+    }
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+    a, a:hover {
+        text-decoration: none !important;
+    }
+.custom-table tbody .icon {
+    
+    color:white;
+}
+
+.content {
+    padding: 7rem 0;
+    margin-top: 0px;
+    overflow-y: auto;
+    margin-left: 310px;
+    width: 1500px;
+}
+
+tbody tr .baslik {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold !important;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 400;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-700px); /* T�m ��elerin geni�li�i toplam� - container geni�li�i */
+    }
+}
+
+.custom-table {
+    max-height: 400px; /* �ste�inize g�re ayarlayabilirsiniz */
+    overflow: auto;
+}
+
+    .custom-table thead tr, .custom-table thead th {
+        padding-bottom: 30px;
+        border-top: none;
+        border-bottom: none !important;
+        color: #fff;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        text-align: center !important;
+        padding-left: 35px;
+        width: 50px;
+    }
+
+    .custom-table tbody td {
+        padding-left: 35px;
+        text-align: center;
+    }
+
+    .custom-table tbody th, .custom-table tbody td {
+        color: black;
+        font-weight: 400;
+        padding-bottom: 20px;
+        font-weight: bold !important;
+        border: none;
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease;
+    }
+
+        .custom-table tbody th small, .custom-table tbody td small {
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 300;
+        }
+
+        .custom-table tbody th a, .custom-table tbody td a {
+            color: black;
+            font-weight: bold !important;
+        }
+
+        .custom-table tbody th .more, .custom-table tbody td .more {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+        }
+
+    .custom-table tbody tr {
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease;
+    }
+
+        .custom-table tbody tr:hover td, .custom-table tbody tr:focus td {
+            color:white;
+        }
+
+            .custom-table tbody tr:hover td a, .custom-table tbody tr:focus td a {
+                color:white;
+            }
+
+            .custom-table tbody tr:hover td .more, .custom-table tbody tr:focus td .more {
+                color: #fdd114;
+            }
+
+    .custom-table .td-box-wrap {
+        padding: 0;
+    }
+
+    .custom-table .box {
+        background: #fff;
+        border-radius: 4px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+        .custom-table .box td, .custom-table .box th {
+            border: none !important;
+        }

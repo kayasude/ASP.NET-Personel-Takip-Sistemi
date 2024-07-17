@@ -1,0 +1,88 @@
+﻿@model EntitiyLayer.Concrete.Entitiy.sube
+@{
+    ViewBag.Title = "subegetir";
+}
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/Content/Style/assets/css/güncelle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- Author: FormBold Team
+     Learn More: https://formbold.com
+    <div class="formbold-form-wrapper">
+
+
+    <
+    form method="POST">-->
+    <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+
+            @using (Html.BeginForm("subeguncelle", "Guncelle", FormMethod.Post))
+
+            {
+                @Html.HiddenFor(model => model.subeID)
+            <div>
+
+                    <div class="formbold-mb-3">
+                        <label for="address" class="formbold-form-label">
+                            Şube Adı
+
+                        </label>
+                        @Html.TextBoxFor(p1 => p1.subeAdi, new { @class = "formbold-form-input" })
+                    </div>
+                    <div class="formbold-mb-3">
+                        <label for="address" class="formbold-form-label">
+                            Şube Adresi
+
+                        </label>
+                        @Html.TextBoxFor(p1 => p1.subeAdresi, new { @class = "formbold-form-input" })
+                    </div>
+                    <div class="formbold-mb-3">
+                        <label for="address" class="formbold-form-label">
+                            Şube Şehri
+
+                        </label>
+                        @Html.TextBoxFor(p1 => p1.subeSehri, new { @class = "formbold-form-input" })
+                    </div>
+                    <div class="formbold-mb-3">
+                        <label for="address" class="formbold-form-label">
+                            Şube Telefonu
+
+                        </label>
+                        @Html.TextBoxFor(p1 => p1.subeTelefonu, new { @class = "formbold-form-input" })
+                    </div>
+                    <div class="formbold-mb-3" >
+                        <label for="lastname" class="formbold-form-label">
+                            Şube Açılış / Kapanış
+
+                        </label>
+                        @Html.TextBoxFor(p1 => p1.subeacilis_kapanis, new { @class = "formbold-form-input" })
+                    </div>
+
+                </div>
+                <button class="formbold-btn" value="Kaydet">Kaydet</button>
+
+                }
+
+            </div>
+    </div>
+
+
+</body>
+</html>
+

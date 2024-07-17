@@ -1,0 +1,135 @@
+﻿
+@model List<EntitiyLayer.Concrete.Entitiy.kullanıcı>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="Restorant,menü ">
+
+    <title>Anasayfa</title>
+    <link href="~/Content/Style/assets/css/tablo.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+            .button:hover {
+                background-color: #45a049;
+            }
+
+            .button:active {
+                background-color: #3e8e41;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            }
+
+        a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <h2 class="mb-5">Müdür Bilgileri</h2>
+        <div class="search-container">
+          
+
+        </div>
+
+        <div class="">
+
+            <table class="table table-striped custom-table  ">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Kullanıcı Adı</th>
+                        <th scope="col">Şifre</th>
+                        <th scope="col">Ad</th>
+                        <th scope="col">Soyad</th>
+                        <th scope="col">Eposta</th>
+                        <th scope="col">Yetki Seviyesi</th>
+
+                       
+
+
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var kullanicibilgi in Model)
+                    {
+
+
+                        <tr>
+
+                            <td>@kullanicibilgi.kullanıcıAdı</td>
+                            <td><a href="#">@kullanicibilgi.sifre</a></td>
+                            <td>@kullanicibilgi.ad<small class="d-block"></small></td>
+                            <td>@kullanicibilgi.soyad</td>
+                            <td>@kullanicibilgi.eposta</td>
+                            <td>@kullanicibilgi.yetkiSeviyesi</td>
+
+                            @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                            {
+                                <td class="icon"><a href="/Mudur/mudurgetir/@kullanicibilgi.kullanıcıID"> <span class="fa fa-pencil mr-3"></span></a></td>
+
+
+
+                            }
+
+
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+            <script>
+
+
+                function confirmDelete(kullanıcıID) {
+                    if (confirm("Bu kaydı silmek istediğinize emin misiniz?")) {
+                        // Silme işlemini gerçekleştirmek için AJAX isteği gönder
+                        $.ajax({
+                            url: '/Mudur/mudursil/' + kullanıcıID,
+                            type: 'POST',
+                            success: function (result) {
+                                // Silme işlemi başarılı olduğunda yapılacak işlemler
+                                alert("Silme işlemi başarıyla gerçekleştirildi.");
+                                // Belirli bir sayfaya yönlendirme
+                                window.location.href = '/Firma/firmabilgisi'; // Yönlendirilecek sayfanın URL'si
+                            },
+
+                        }
+                        );
+                    }
+                }
+            </script>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="personel_takip_otomasyonuModelStoreContainer" CdmEntityContainer="personel_takip_otomasyonuEntities">
+    <EntitySetMapping Name="firma">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.firma">
+        <MappingFragment StoreEntitySet="firma">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="firmaAd" ColumnName="firmaAd" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="kurulus_tarihi" ColumnName="kurulus_tarihi" />
+          <ScalarProperty Name="calisan_sayisi" ColumnName="calisan_sayisi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="girisÇıkısBilgisi">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.girisÇıkısBilgisi">
+        <MappingFragment StoreEntitySet="girisÇıkısBilgisi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="personelID" ColumnName="personelID" />
+          <ScalarProperty Name="subeID" ColumnName="subeID" />
+          <ScalarProperty Name="İslemTarihiSaat" ColumnName="İslemTarihiSaat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanıcı">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.kullanıcı">
+        <MappingFragment StoreEntitySet="kullanıcı">
+          <ScalarProperty Name="kullanıcıID" ColumnName="kullanıcıID" />
+          <ScalarProperty Name="kullanıcıAdı" ColumnName="kullanıcıAdı" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="eposta" ColumnName="eposta" />
+          <ScalarProperty Name="yetkiSeviyesi" ColumnName="yetkiSeviyesi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kullanıcıYetki">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.kullanıcıYetki">
+        <MappingFragment StoreEntitySet="kullanıcıYetki">
+          <ScalarProperty Name="kullanıcıYetkiID" ColumnName="kullanıcıYetkiID" />
+          <ScalarProperty Name="kullanıcıID" ColumnName="kullanıcıID" />
+          <ScalarProperty Name="yetkiID" ColumnName="yetkiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Log">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="logID" ColumnName="logID" />
+          <ScalarProperty Name="zaman" ColumnName="zaman" />
+          <ScalarProperty Name="kullanıcıID" ColumnName="kullanıcıID" />
+          <ScalarProperty Name="seviye" ColumnName="seviye" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personel">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.personel">
+        <MappingFragment StoreEntitySet="personel">
+          <ScalarProperty Name="personelID" ColumnName="personelID" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="tc" ColumnName="tc" />
+          <ScalarProperty Name="dogumTarihi" ColumnName="dogumTarihi" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="adres" ColumnName="adres" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="pozisyon" ColumnName="pozisyon" />
+          <ScalarProperty Name="maas" ColumnName="maas" />
+          <ScalarProperty Name="kartseriNo" ColumnName="kartseriNo" />
+          <ScalarProperty Name="sicilDosyasi" ColumnName="sicilDosyasi" />
+          <ScalarProperty Name="sicilDosyaAdi" ColumnName="sicilDosyaAdi" />
+          <ScalarProperty Name="ikametDosyasi" ColumnName="ikametDosyasi" />
+          <ScalarProperty Name="ikametDosyaAdi" ColumnName="ikametDosyaAdi" />
+          <ScalarProperty Name="saglikRaporuDosyasi" ColumnName="saglikRaporuDosyasi" />
+          <ScalarProperty Name="sagliKRaporuDosyasiAdi" ColumnName="sagliKRaporuDosyasiAdi" />
+          <ScalarProperty Name="mezunDosyasi" ColumnName="mezunDosyasi" />
+          <ScalarProperty Name="mezunDosyasiAdi" ColumnName="mezunDosyasiAdi" />
+          <ScalarProperty Name="kimlikDosyasi" ColumnName="kimlikDosyasi" />
+          <ScalarProperty Name="kimlikDosyasiAdi" ColumnName="kimlikDosyasiAdi" />
+          <ScalarProperty Name="firmaGirisCikis" ColumnName="firmaGirisCikis" />
+          <ScalarProperty Name="fotograf" ColumnName="fotograf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sube">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.sube">
+        <MappingFragment StoreEntitySet="sube">
+          <ScalarProperty Name="subeID" ColumnName="subeID" />
+          <ScalarProperty Name="subeAdi" ColumnName="subeAdi" />
+          <ScalarProperty Name="subeAdresi" ColumnName="subeAdresi" />
+          <ScalarProperty Name="subeSehri" ColumnName="subeSehri" />
+          <ScalarProperty Name="subeTelefonu" ColumnName="subeTelefonu" />
+          <ScalarProperty Name="subeacilis_kapanis" ColumnName="subeacilis_kapanis" />
+          <ScalarProperty Name="yetkiMUDUR" ColumnName="yetkiMUDUR" />
+          <ScalarProperty Name="yetkiYONETİCİ" ColumnName="yetkiYONETİCİ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yetki">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.yetki">
+        <MappingFragment StoreEntitySet="yetki">
+          <ScalarProperty Name="yetkiID" ColumnName="yetkiID" />
+          <ScalarProperty Name="yetkiAdı" ColumnName="yetkiAdı" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personel_sube">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.personel_sube">
+        <MappingFragment StoreEntitySet="personel_sube">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="personelID" ColumnName="personelID" />
+          <ScalarProperty Name="subeID" ColumnName="subeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApiResponse">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.ApiResponse">
+        <MappingFragment StoreEntitySet="ApiResponse">
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="GetApiId" ColumnName="GetApiId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personelgiriscikis">
+      <EntityTypeMapping TypeName="personel_takip_otomasyonuModel.personelgiriscikis">
+        <MappingFragment StoreEntitySet="personelgiriscikis">
+          <ScalarProperty Name="cikis" ColumnName="cikis" />
+          <ScalarProperty Name="giris" ColumnName="giris" />
+          <ScalarProperty Name="subeID" ColumnName="subeID" />
+          <ScalarProperty Name="personelID" ColumnName="personelID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

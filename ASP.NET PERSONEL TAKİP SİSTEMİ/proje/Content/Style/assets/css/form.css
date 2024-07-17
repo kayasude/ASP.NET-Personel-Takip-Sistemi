@@ -1,0 +1,37 @@
+/* Modal */
+.modal {
+  display: none; /* Baþlangýçta gizli */
+  position: fixed; /* Diðer öðelerin üstünde görünmesini saðlar */
+  z-index: 1; /* Diðer öðelerin üstünde görünmesini saðlar */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Küçük ekranlarda kaydýrma çubuðunu etkinleþtirir */
+  background-color: rgb(0,0,0); /* Siyah bir arka plan renk */
+  background-color: rgba(0,0,0,0.4); /* Þeffaf bir arka plan renk */
+}
+
+/* Modal içeriði */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Modalý ortalamak için */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Modalýn geniþliði */
+}
+
+/* Kapat düðmesi */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

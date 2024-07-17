@@ -1,0 +1,28 @@
+﻿@model EntitiyLayer.Concrete.Entitiy.personel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Yükleme Formu</title>
+    <link href="~/Content/Style/assets/css/pdftablo.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="pdfform">
+
+        <form action="@Url.Action("FotografYukle", "Personel")" method="post" enctype="multipart/form-data">
+
+
+
+
+            <input type="hidden" name=" ViewBag.Id" value=" ViewBag.Id" placeholder=" ViewBag.Id" required>
+
+            <label for="ikametDosyasi">PDF Dosyası Seçin:</label>
+
+
+            <input type="file" id="file" name="file" accept=".jpg" required><br><br>
+
+            <button type="submit">Yükle</button>
+        </form>
+    </div>
+</body>
+</html>

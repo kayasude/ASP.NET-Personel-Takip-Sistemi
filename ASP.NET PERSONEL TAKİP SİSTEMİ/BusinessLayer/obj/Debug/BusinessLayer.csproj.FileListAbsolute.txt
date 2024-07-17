@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\proje 16.05.2024\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\User\Desktop\proje 16.05.2024\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\User\Desktop\proje 16.05.2024\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\proje 16.05.2024\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\proje 16.05.2024\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\User\Desktop\proje 16.05.2024\BusinessLayer\obj\Debug\BusinessLayer.pdb

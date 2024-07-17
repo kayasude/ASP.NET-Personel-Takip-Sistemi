@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="personel_takip_otomasyonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ApiResponse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GetApiId" Type="int" Nullable="false" />
+    <Property Name="CardNo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="firma">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="firmaAd" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="adres" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="telefon" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="kurulus_tarihi" Type="date" Nullable="false" />
+    <Property Name="calisan_sayisi" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="girisÇıkısBilgisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="personelID" Type="int" Nullable="false" />
+    <Property Name="subeID" Type="int" Nullable="false" />
+    <Property Name="İslemTarihiSaat" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kullanıcı">
+    <Key>
+      <PropertyRef Name="kullanıcıID" />
+    </Key>
+    <Property Name="kullanıcıID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullanıcıAdı" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="eposta" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="yetkiSeviyesi" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kullanıcıYetki">
+    <Key>
+      <PropertyRef Name="kullanıcıYetkiID" />
+    </Key>
+    <Property Name="kullanıcıYetkiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullanıcıID" Type="int" Nullable="false" />
+    <Property Name="yetkiID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="logID" />
+    </Key>
+    <Property Name="logID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="zaman" Type="datetime" Nullable="false" />
+    <Property Name="kullanıcıID" Type="int" Nullable="false" />
+    <Property Name="seviye" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="mesaj" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="personel">
+    <Key>
+      <PropertyRef Name="personelID" />
+    </Key>
+    <Property Name="personelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="soyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="tc" Type="nvarchar" MaxLength="11" />
+    <Property Name="dogumTarihi" Type="date" />
+    <Property Name="cinsiyet" Type="nvarchar" MaxLength="10" />
+    <Property Name="adres" Type="nvarchar" MaxLength="200" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="pozisyon" Type="nvarchar" MaxLength="100" />
+    <Property Name="maas" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="kartseriNo" Type="nvarchar" MaxLength="30" />
+    <Property Name="sicilDosyasi" Type="varbinary(max)" />
+    <Property Name="sicilDosyaAdi" Type="nvarchar(max)" />
+    <Property Name="ikametDosyasi" Type="varbinary(max)" />
+    <Property Name="ikametDosyaAdi" Type="nvarchar(max)" />
+    <Property Name="saglikRaporuDosyasi" Type="varbinary(max)" />
+    <Property Name="sagliKRaporuDosyasiAdi" Type="nvarchar(max)" />
+    <Property Name="mezunDosyasi" Type="varbinary(max)" />
+    <Property Name="mezunDosyasiAdi" Type="nvarchar(max)" />
+    <Property Name="kimlikDosyasi" Type="varbinary(max)" />
+    <Property Name="kimlikDosyasiAdi" Type="nvarchar(max)" />
+    <Property Name="firmaGirisCikis" Type="nvarchar" MaxLength="50" />
+    <Property Name="fotograf" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'personel_takip_otomasyonu.dbo.personel_sube' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="personel_sube">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="personelID" />
+      <PropertyRef Name="subeID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="personelID" Type="int" Nullable="false" />
+    <Property Name="subeID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'personel_takip_otomasyonu.dbo.personelgiriscikis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="personelgiriscikis">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="personelID" />
+      <PropertyRef Name="subeID" />
+      <PropertyRef Name="giris" />
+      <PropertyRef Name="cikis" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="personelID" Type="int" Nullable="false" />
+    <Property Name="subeID" Type="int" Nullable="false" />
+    <Property Name="giris" Type="datetime" Nullable="false" />
+    <Property Name="cikis" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sube">
+    <Key>
+      <PropertyRef Name="subeID" />
+    </Key>
+    <Property Name="subeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="subeAdi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="subeAdresi" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="subeSehri" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="subeTelefonu" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="subeacilis_kapanis" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="yetkiMUDUR" Type="nchar" MaxLength="10" />
+    <Property Name="yetkiYONETİCİ" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="yetki">
+    <Key>
+      <PropertyRef Name="yetkiID" />
+    </Key>
+    <Property Name="yetkiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="yetkiAdı" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="aciklama" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__girisÇıkı__perso__3F466844">
+    <End Role="personel" Type="Self.personel" Multiplicity="1" />
+    <End Role="girisÇıkısBilgisi" Type="Self.girisÇıkısBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personel">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="girisÇıkısBilgisi">
+        <PropertyRef Name="personelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__kullanıcı__kulla__47DBAE45">
+    <End Role="kullanıcı" Type="Self.kullanıcı" Multiplicity="1" />
+    <End Role="kullanıcıYetki" Type="Self.kullanıcıYetki" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanıcı">
+        <PropertyRef Name="kullanıcıID" />
+      </Principal>
+      <Dependent Role="kullanıcıYetki">
+        <PropertyRef Name="kullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__kullanıcı__yetki__48CFD27E">
+    <End Role="yetki" Type="Self.yetki" Multiplicity="1" />
+    <End Role="kullanıcıYetki" Type="Self.kullanıcıYetki" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="yetki">
+        <PropertyRef Name="yetkiID" />
+      </Principal>
+      <Dependent Role="kullanıcıYetki">
+        <PropertyRef Name="yetkiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__personel___perso__3B75D760">
+    <End Role="personel" Type="Self.personel" Multiplicity="1" />
+    <End Role="personel_sube" Type="Self.personel_sube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personel">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="personel_sube">
+        <PropertyRef Name="personelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Log_kullanıcı">
+    <End Role="kullanıcı" Type="Self.kullanıcı" Multiplicity="1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanıcı">
+        <PropertyRef Name="kullanıcıID" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="kullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_personelgiriscikis_personel">
+    <End Role="personel" Type="Self.personel" Multiplicity="1" />
+    <End Role="personelgiriscikis" Type="Self.personelgiriscikis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personel">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="personelgiriscikis">
+        <PropertyRef Name="personelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="personel_takip_otomasyonuModelStoreContainer">
+    <EntitySet Name="ApiResponse" EntityType="Self.ApiResponse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="firma" EntityType="Self.firma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="girisÇıkısBilgisi" EntityType="Self.girisÇıkısBilgisi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanıcı" EntityType="Self.kullanıcı" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kullanıcıYetki" EntityType="Self.kullanıcıYetki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personel" EntityType="Self.personel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sube" EntityType="Self.sube" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="yetki" EntityType="Self.yetki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personel_sube" EntityType="Self.personel_sube" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [personel_sube].[ID] AS [ID], 
+    [personel_sube].[personelID] AS [personelID], 
+    [personel_sube].[subeID] AS [subeID]
+    FROM [dbo].[personel_sube] AS [personel_sube]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="personelgiriscikis" EntityType="Self.personelgiriscikis" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [personelgiriscikis].[ID] AS [ID], 
+    [personelgiriscikis].[personelID] AS [personelID], 
+    [personelgiriscikis].[subeID] AS [subeID], 
+    [personelgiriscikis].[giris] AS [giris], 
+    [personelgiriscikis].[cikis] AS [cikis]
+    FROM [dbo].[personelgiriscikis] AS [personelgiriscikis]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__girisÇıkı__perso__3F466844" Association="Self.FK__girisÇıkı__perso__3F466844">
+      <End Role="personel" EntitySet="personel" />
+      <End Role="girisÇıkısBilgisi" EntitySet="girisÇıkısBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__kullanıcı__kulla__47DBAE45" Association="Self.FK__kullanıcı__kulla__47DBAE45">
+      <End Role="kullanıcı" EntitySet="kullanıcı" />
+      <End Role="kullanıcıYetki" EntitySet="kullanıcıYetki" />
+    </AssociationSet>
+    <AssociationSet Name="FK__kullanıcı__yetki__48CFD27E" Association="Self.FK__kullanıcı__yetki__48CFD27E">
+      <End Role="yetki" EntitySet="yetki" />
+      <End Role="kullanıcıYetki" EntitySet="kullanıcıYetki" />
+    </AssociationSet>
+    <AssociationSet Name="FK__personel___perso__3B75D760" Association="Self.FK__personel___perso__3B75D760">
+      <End Role="personel" EntitySet="personel" />
+      <End Role="personel_sube" EntitySet="personel_sube" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Log_kullanıcı" Association="Self.FK_Log_kullanıcı">
+      <End Role="kullanıcı" EntitySet="kullanıcı" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_personelgiriscikis_personel" Association="Self.FK_personelgiriscikis_personel">
+      <End Role="personel" EntitySet="personel" />
+      <End Role="personelgiriscikis" EntitySet="personelgiriscikis" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

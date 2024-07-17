@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "personelekle";
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/Content/Style/assets/css/güncelle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="formbold-main-wrapper">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper">
+
+
+            @using (Html.BeginForm("personelekle", "Personel", FormMethod.Post))
+
+            {
+                <div class="formbold-form-title">
+                    <h2 class=""></h2>
+
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="ad" class="formbold-form-label">
+                            Ad
+                        </label>
+                        <input type="text"
+                               name="ad"
+                               id="ad"
+                               class="formbold-form-input"
+                                />
+                    </div>
+                    <div>
+                        <label for="soyad" class="formbold-form-label"> Soyad </label>
+                        <input type="text"
+                               name="soyad"
+                               id="soyad"
+                               class="formbold-form-input" />
+                    </div>
+                </div>
+
+                <div class="formbold-input-flex">
+                    <div>
+                        <label for="tc" class="formbold-form-label"> Tc </label>
+                        <input type="text"
+                               name="tc"
+                               id="tc"
+                               class="formbold-form-input" />
+                    </div>
+                    <div>
+                        <label for="telefon" class="formbold-form-label"> Telefon Numarası </label>
+                        <input type="text"
+                               name="telefon"
+                               id="telefon"
+                               class="formbold-form-input" />
+                    </div>
+                </div>
+
+                if (ViewBag.AllowIstanbulTable != null && (bool)ViewBag.AllowIstanbulTable)
+                {
+                    <div class="formbold-mb-3">
+                        <label for="adres" class="formbold-form-label">
+                            Adres
+                        </label>
+                        <input type="text"
+                               name="adres"
+                               id="adres"
+                               class="formbold-form-input"
+                               value="İSTANBUL"
+                               readonly />
+                    </div>
+                }
+                else if (ViewBag.AllowKonyaTable != null && (bool)ViewBag.AllowKonyaTable)
+                {
+                    <div class="formbold-mb-3">
+                        <label for="adres" class="formbold-form-label">
+                            Adres
+                        </label>
+                        <input type="text"
+                               name="adres"
+                               id="adres"
+                               class="formbold-form-input"
+                               value="KONYA"
+                               readonly />
+                    </div>
+                }
+                else if (ViewBag.AllowNevsehirTable != null && (bool)ViewBag.AllowNevsehirTable)
+                {
+                    <div class="formbold-mb-3">
+                        <label for="adres" class="formbold-form-label">
+                            Adres
+                        </label>
+                        <input type="text"
+                               name="adres"
+                               id="adres"
+                               class="formbold-form-input"
+                               value="NEVŞEHİR"
+                               readonly />
+                    </div>
+                }
+                else if (ViewBag.AllowAnkaraTable != null && (bool)ViewBag.AllowAnkaraTable)
+                {
+                    <div class="formbold-mb-3">
+                        <label for="adres" class="formbold-form-label">
+                            Adres
+                        </label>
+                        <input type="text"
+                               name="adres"
+                               id="adres"
+                               class="formbold-form-input"
+                               value="ANKARA"
+                               readonly />
+                    </div>
+                }
+                else if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                {
+                    <div class="formbold-mb-3">
+                        <label for="adres" class="formbold-form-label">
+                            Adres
+                        </label>
+                        <input type="text"
+                               name="adres"
+                               id="adres"
+                               class="formbold-form-input"
+                                />
+                    </div>
+                }
+                <div class="formbold-mb-3">
+                    <label for="cinsiyet" class="formbold-form-label">
+                        Cinsiyet
+                    </label>
+                    <input type="text"
+                           name="cinsiyet"
+                           id="cinsiyet"
+                           class="formbold-form-input" />
+
+                </div>
+                <div class="formbold-mb-3">
+                    <label for="pozisyon" class="formbold-form-label">
+                        Pozisyon
+                    </label>
+                    <input type="text"
+                           name="pozisyon"
+                           id="pozisyon"
+                           class="formbold-form-input" />
+                </div>
+                <div class="formbold-mb-3">
+                    <label for="maas" class="formbold-form-label">
+                        Maas
+                    </label>
+                    <input type="text"
+                           name="maas"
+                           id="maas"
+                           class="formbold-form-input" />
+                </div>
+
+
+
+
+
+
+
+
+                <button class="formbold-btn" value="Kaydet">Kaydet</button>
+            }
+        </div>
+    </div>
+
+
+</body>
+</html>
+

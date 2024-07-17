@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="personel_takip_otomasyonuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="firma">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="firmaAd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="adres" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kurulus_tarihi" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="calisan_sayisi" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="girisÇıkısBilgisi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="personelID" Type="Int32" Nullable="false" />
+    <Property Name="subeID" Type="Int32" Nullable="false" />
+    <Property Name="İslemTarihiSaat" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="personel" Relationship="Self.FK__girisÇıkı__perso__3F466844" FromRole="girisÇıkısBilgisi" ToRole="personel" />
+  </EntityType>
+  <EntityType Name="kullanıcı">
+    <Key>
+      <PropertyRef Name="kullanıcıID" />
+    </Key>
+    <Property Name="kullanıcıID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanıcıAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sifre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="eposta" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="yetkiSeviyesi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="kullanıcıYetki" Relationship="Self.FK__kullanıcı__kulla__47DBAE45" FromRole="kullanıcı" ToRole="kullanıcıYetki" />
+    <NavigationProperty Name="Log" Relationship="Self.FK_Log_kullanıcı" FromRole="kullanıcı" ToRole="Log" />
+  </EntityType>
+  <EntityType Name="kullanıcıYetki">
+    <Key>
+      <PropertyRef Name="kullanıcıYetkiID" />
+    </Key>
+    <Property Name="kullanıcıYetkiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="yetkiID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="kullanıcı" Relationship="Self.FK__kullanıcı__kulla__47DBAE45" FromRole="kullanıcıYetki" ToRole="kullanıcı" />
+    <NavigationProperty Name="yetki" Relationship="Self.FK__kullanıcı__yetki__48CFD27E" FromRole="kullanıcıYetki" ToRole="yetki" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="logID" />
+    </Key>
+    <Property Name="logID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="zaman" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="kullanıcıID" Type="Int32" Nullable="false" />
+    <Property Name="seviye" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="kullanıcı" Relationship="Self.FK_Log_kullanıcı" FromRole="Log" ToRole="kullanıcı" />
+  </EntityType>
+  <EntityType Name="personel">
+    <Key>
+      <PropertyRef Name="personelID" />
+    </Key>
+    <Property Name="personelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tc" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="dogumTarihi" Type="DateTime" Precision="0" />
+    <Property Name="cinsiyet" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="pozisyon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="maas" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="kartseriNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="sicilDosyasi" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="sicilDosyaAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ikametDosyasi" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ikametDosyaAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="saglikRaporuDosyasi" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="sagliKRaporuDosyasiAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mezunDosyasi" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="mezunDosyasiAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="kimlikDosyasi" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="kimlikDosyasiAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="firmaGirisCikis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fotograf" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="girisÇıkısBilgisi" Relationship="Self.FK__girisÇıkı__perso__3F466844" FromRole="personel" ToRole="girisÇıkısBilgisi" />
+    <NavigationProperty Name="personel_sube" Relationship="Self.FK__personel___perso__3B75D760" FromRole="personel" ToRole="personel_sube" />
+    <NavigationProperty Name="personelgiriscikis" Relationship="personel_takip_otomasyonuModel.FK_personelgiriscikis_personel" FromRole="personel" ToRole="personelgiriscikis" />
+  </EntityType>
+  <EntityType Name="sube">
+    <Key>
+      <PropertyRef Name="subeID" />
+    </Key>
+    <Property Name="subeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subeAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subeAdresi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subeSehri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subeTelefonu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subeacilis_kapanis" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="yetkiMUDUR" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="yetkiYONETİCİ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="yetki">
+    <Key>
+      <PropertyRef Name="yetkiID" />
+    </Key>
+    <Property Name="yetkiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yetkiAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="aciklama" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="kullanıcıYetki" Relationship="Self.FK__kullanıcı__yetki__48CFD27E" FromRole="yetki" ToRole="kullanıcıYetki" />
+  </EntityType>
+  <EntityType Name="personel_sube">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="personelID" />
+      <PropertyRef Name="subeID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="personelID" Type="Int32" Nullable="false" />
+    <Property Name="subeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="personel" Relationship="Self.FK__personel___perso__3B75D760" FromRole="personel_sube" ToRole="personel" />
+  </EntityType>
+  <Association Name="FK__girisÇıkı__perso__3F466844">
+    <End Role="personel" Type="Self.personel" Multiplicity="1" />
+    <End Role="girisÇıkısBilgisi" Type="Self.girisÇıkısBilgisi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personel">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="girisÇıkısBilgisi">
+        <PropertyRef Name="personelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__kullanıcı__kulla__47DBAE45">
+    <End Role="kullanıcı" Type="Self.kullanıcı" Multiplicity="1" />
+    <End Role="kullanıcıYetki" Type="Self.kullanıcıYetki" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanıcı">
+        <PropertyRef Name="kullanıcıID" />
+      </Principal>
+      <Dependent Role="kullanıcıYetki">
+        <PropertyRef Name="kullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Log_kullanıcı">
+    <End Role="kullanıcı" Type="Self.kullanıcı" Multiplicity="1" />
+    <End Role="Log" Type="Self.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kullanıcı">
+        <PropertyRef Name="kullanıcıID" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="kullanıcıID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__kullanıcı__yetki__48CFD27E">
+    <End Role="yetki" Type="Self.yetki" Multiplicity="1" />
+    <End Role="kullanıcıYetki" Type="Self.kullanıcıYetki" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="yetki">
+        <PropertyRef Name="yetkiID" />
+      </Principal>
+      <Dependent Role="kullanıcıYetki">
+        <PropertyRef Name="yetkiID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__personel___perso__3B75D760">
+    <End Role="personel" Type="Self.personel" Multiplicity="1" />
+    <End Role="personel_sube" Type="Self.personel_sube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personel">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="personel_sube">
+        <PropertyRef Name="personelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="personel_takip_otomasyonuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="firma" EntityType="Self.firma" />
+    <EntitySet Name="girisÇıkısBilgisi" EntityType="Self.girisÇıkısBilgisi" />
+    <EntitySet Name="kullanıcı" EntityType="Self.kullanıcı" />
+    <EntitySet Name="kullanıcıYetki" EntityType="Self.kullanıcıYetki" />
+    <EntitySet Name="Log" EntityType="Self.Log" />
+    <EntitySet Name="personel" EntityType="Self.personel" />
+    <EntitySet Name="sube" EntityType="Self.sube" />
+    <EntitySet Name="yetki" EntityType="Self.yetki" />
+    <EntitySet Name="personel_sube" EntityType="Self.personel_sube" />
+    <AssociationSet Name="FK__girisÇıkı__perso__3F466844" Association="Self.FK__girisÇıkı__perso__3F466844">
+      <End Role="personel" EntitySet="personel" />
+      <End Role="girisÇıkısBilgisi" EntitySet="girisÇıkısBilgisi" />
+    </AssociationSet>
+    <AssociationSet Name="FK__kullanıcı__kulla__47DBAE45" Association="Self.FK__kullanıcı__kulla__47DBAE45">
+      <End Role="kullanıcı" EntitySet="kullanıcı" />
+      <End Role="kullanıcıYetki" EntitySet="kullanıcıYetki" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Log_kullanıcı" Association="Self.FK_Log_kullanıcı">
+      <End Role="kullanıcı" EntitySet="kullanıcı" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK__kullanıcı__yetki__48CFD27E" Association="Self.FK__kullanıcı__yetki__48CFD27E">
+      <End Role="yetki" EntitySet="yetki" />
+      <End Role="kullanıcıYetki" EntitySet="kullanıcıYetki" />
+    </AssociationSet>
+    <AssociationSet Name="FK__personel___perso__3B75D760" Association="Self.FK__personel___perso__3B75D760">
+      <End Role="personel" EntitySet="personel" />
+      <End Role="personel_sube" EntitySet="personel_sube" />
+    </AssociationSet>
+    <EntitySet Name="ApiResponse" EntityType="personel_takip_otomasyonuModel.ApiResponse" />
+    <EntitySet Name="personelgiriscikis" EntityType="personel_takip_otomasyonuModel.personelgiriscikis" />
+    <AssociationSet Name="FK_personelgiriscikis_personel" Association="personel_takip_otomasyonuModel.FK_personelgiriscikis_personel">
+      <End Role="personel" EntitySet="personel" />
+      <End Role="personelgiriscikis" EntitySet="personelgiriscikis" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ApiResponse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GetApiId" Type="Int32" Nullable="false" />
+    <Property Name="CardNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="personelgiriscikis">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="personelID" />
+      <PropertyRef Name="subeID" />
+      <PropertyRef Name="giris" />
+      <PropertyRef Name="cikis" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="personelID" Type="Int32" Nullable="false" />
+    <Property Name="subeID" Type="Int32" Nullable="false" />
+    <Property Name="giris" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cikis" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="personel" Relationship="personel_takip_otomasyonuModel.FK_personelgiriscikis_personel" FromRole="personelgiriscikis" ToRole="personel" />
+  </EntityType>
+  <Association Name="FK_personelgiriscikis_personel">
+    <End Type="personel_takip_otomasyonuModel.personel" Role="personel" Multiplicity="1" />
+    <End Type="personel_takip_otomasyonuModel.personelgiriscikis" Role="personelgiriscikis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personel">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="personelgiriscikis">
+        <PropertyRef Name="personelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

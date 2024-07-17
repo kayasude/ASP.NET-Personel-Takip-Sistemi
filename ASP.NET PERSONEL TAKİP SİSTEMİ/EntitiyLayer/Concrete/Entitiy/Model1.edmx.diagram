@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="17b2c30f9b984624aaacb938d9b4bde5" Name="Diagram1">
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.firma" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.girisÇıkısBilgisi" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.kullanıcı" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.kullanıcıYetki" Width="1.5" PointX="8" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.Log" Width="1.5" PointX="8" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.personel" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.sube" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.yetki" Width="1.5" PointX="7.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.personel_sube" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="personel_takip_otomasyonuModel.FK__girisÇıkı__perso__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="personel_takip_otomasyonuModel.FK__kullanıcı__kulla__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="personel_takip_otomasyonuModel.FK_Log_kullanıcı" ManuallyRouted="false" />
+        <AssociationConnector Association="personel_takip_otomasyonuModel.FK__kullanıcı__yetki__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="personel_takip_otomasyonuModel.FK__personel___perso__3B75D760" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.ApiResponse" Width="1.5" PointX="10" PointY="7.875" />
+        <EntityTypeShape EntityType="personel_takip_otomasyonuModel.personelgiriscikis" Width="1.5" PointX="4.5" PointY="8" />
+        <AssociationConnector Association="personel_takip_otomasyonuModel.FK_personelgiriscikis_personel" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

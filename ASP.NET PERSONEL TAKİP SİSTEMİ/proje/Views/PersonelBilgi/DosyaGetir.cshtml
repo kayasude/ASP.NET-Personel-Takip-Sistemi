@@ -1,0 +1,313 @@
+﻿@model  EntitiyLayer.Concrete.Entitiy.personel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="Restorant,menü ">
+    <script src="~/Content/Style/assets/js/tablo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Anasayfa</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+            .button:hover {
+                background-color: #45a049;
+            }
+
+            .button:active {
+                background-color: #3e8e41;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            }
+
+        a:hover {
+            color: white;
+        }
+
+        .dropdown-menu {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .dropdown {
+            display: inline-block;
+            margin-right: 10px; /* İstenilen boşluk miktarını ayarlayabilirsiniz */
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="content">
+
+        <h2 class="mb-5">Personel Bilgileri</h2>
+        <table class="table table-striped custom-table " id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">Dosyalar</th>
+                    <th scope="col">İndir</th>
+                    <th>Dosya Adı</th>
+
+                    <th scope="col">Mevcutluk</th>
+                    <th scope="col">Degiştir</th>
+                    <th scope="col">Sil</th>
+
+                </tr>
+
+            </thead>
+            <tbody>
+
+
+
+                <tr>
+                    <td>
+                        <h3>Sicil Dosyası</h3>
+                    </td>
+                    <td><a href="/PersonelBilgi/Dosyaİndir/@ViewBag.Id" class="button">Dosyayı İndir</a></td>
+                    <td><label>@Model.sicilDosyaAdi</label></td>
+
+                    @if (Model.sicilDosyasi != null)
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    }
+
+
+
+
+                    <td><a href="/PersonelBilgi/SicilYukle/@ViewBag.Id " class="button">Dosyayı Değiştir</a></td>
+
+                    <td>
+                        <a href="/PersonelBilgi/DosyaSil/@ViewBag.Id "><span class="fa fa-times mr-3"></span></a>
+                    </td>
+
+
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>İkamet Dosyası</h3>
+                    </td>
+                    <td><a href="/PersonelBilgi/DosyaIndirIkamet/@ViewBag.Id" class="button">Dosyayı İndir</a></td>
+                    <td><label>@Model.ikametDosyaAdi</label></td>
+
+                    @if (Model.ikametDosyasi != null)
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    }
+
+
+
+
+                    <td><a href="/PersonelBilgi/ikametYukle/@ViewBag.Id " class="button">Dosyayı Değiştir</a></td>
+
+                    <td>
+                        <a href="/PersonelBilgi/DosyaSilİkamet/@ViewBag.Id "><span class="fa fa-times mr-3"></span></a>
+                    </td>
+
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Sağlık Raporu Dosyası</h3>
+                    </td>
+                    <td><a href="/PersonelBilgi/DosyaIndirSaglik/@ViewBag.Id" class="button">Dosyayı İndir</a></td>
+                    <td><label>@Model.sagliKRaporuDosyasiAdi</label></td>
+
+                    @if (Model.saglikRaporuDosyasi != null)
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    }
+
+
+
+
+                    <td><a href="/PersonelBilgi/saglikRaporYukle/@ViewBag.Id " class="button">Dosyayı Değiştir</a></td>
+
+                    <td>
+                        <a href="/PersonelBilgi/DosyaSilSaglik/@ViewBag.Id "><span class="fa fa-times mr-3"></span></a>
+                    </td>
+
+
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>Mezun Dosyası</h3>
+                    </td>
+                    <td><a href="/PersonelBilgi/DosyaIndirMezun/@ViewBag.Id" class="button">Dosyayı İndir</a></td>
+                    <td><label>@Model.mezunDosyasiAdi</label></td>
+
+                    @if (Model.mezunDosyasi != null)
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    }
+
+
+
+
+                    <td><a href="/PersonelBilgi/mezunDosyasiYukle/@ViewBag.Id " class="button">Dosyayı Değiştir</a></td>
+
+                    <td>
+                        <a href="/PersonelBilgi/DosyaSilMezun/@ViewBag.Id "><span class="fa fa-times mr-3"></span></a>
+                    </td>
+
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Kimlik Dosyası</h3>
+                    </td>
+                    <td><a href="/PersonelBilgi/DosyaIndirKimlik/@ViewBag.Id" class="button">Dosyayı İndir</a></td>
+                    <td><label>@Model.kimlikDosyasiAdi</label></td>
+
+                    @if (Model.kimlikDosyasi != null)
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    }
+
+
+
+
+                    <td><a href="/PersonelBilgi/kimlikDosyasiYukle/@ViewBag.Id " class="button">Dosyayı Değiştir</a></td>
+
+                    <td>
+                        <a href="/PersonelBilgi/DosyaSilKimlik/@ViewBag.Id "><span class="fa fa-times mr-3"></span></a>
+                    </td>
+
+
+
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Fotoğraf</h3>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    @if (Model.fotograf != null)
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <a href="" class="button">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </td>
+                    }
+
+
+
+
+                    <td><a href="/Personel/FotografYukle/@ViewBag.Id " class="button">Fotoğrafı Değiştir</a></td>
+
+                    <td>
+                        <a href="/Personel/FotografSil/@ViewBag.Id "><span class="fa fa-times mr-3"></span></a>
+                    </td>
+
+
+
+                </tr>
+            </tbody>
+
+
+        </table>
+
+       
+    </div>
+                
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.dll.config
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.dll
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.pdb
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyL.443F325D.Up2Date
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.dll
+C:\Users\User\Desktop\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.pdb
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.dll.config
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.dll
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.pdb
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.dll
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.xml
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.csproj.AssemblyReference.cache
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.csproj.CoreCompileInputs.cache
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.csproj.CopyComplete
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.dll
+C:\Users\sudek\OneDrive\Masaüstü\proje 16.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.pdb
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.dll.config
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.dll
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\bin\Debug\EntitiyLayer.pdb
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\bin\Debug\EntityFramework.dll
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\bin\Debug\EntityFramework.xml
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.csproj.AssemblyReference.cache
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.csproj.CoreCompileInputs.cache
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\obj\Debug\EntitiyL.443F325D.Up2Date
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.dll
+C:\Users\sudek\OneDrive\Masaüstü\PERSONEL TAKİP OTOMASYONU\proje 21.05.2024\EntitiyLayer\obj\Debug\EntitiyLayer.pdb

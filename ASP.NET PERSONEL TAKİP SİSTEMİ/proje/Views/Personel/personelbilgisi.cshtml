@@ -1,0 +1,271 @@
+﻿@model List<EntitiyLayer.Concrete.Entitiy.personel>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="Restorant,menü ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+    <link href="~/Content/Style/assets/css/tablo2.css" rel="stylesheet" />
+
+    <title>Anasayfa</title>
+
+
+</head>
+
+<body>
+
+    <div class="tablediv">
+
+
+        <h2 class="mb-5">Personel Bilgileri</h2>
+
+        @if (ViewBag.Message != null)
+        {
+            <label style="color: red;">@ViewBag.Message</label>
+        }
+        <div class="search-container">
+            <a href="/Personel/personelekle" class="button">Personel Ekle</a>
+
+
+
+        </div>
+
+
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="positionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pozisyon
+            </button>
+            <div class="dropdown-menu" aria-labelledby="positionDropdown">
+                <button class="dropdown-item filterButton" data-filter="all">Tümü</button>
+
+                @{
+                    // Yöneticiden gelen pozisyonları bir diziye topla RAZOR SYNTAX KULLANILIYOR.
+                    List<string> pozisyonlistesi = new List<string>();
+                    foreach (var item in Model)
+                    {
+                        if (!pozisyonlistesi.Contains(item.pozisyon))
+                        {
+                            pozisyonlistesi.Add(item.pozisyon);
+                        }
+                    }
+
+                    // Benzersiz pozisyonları yazdır
+                    <div class="dropdown-horizontal">
+                        @foreach (var pozisyon in pozisyonlistesi)
+                        {
+                            <button class="dropdown-item filterButton" data-filter="@pozisyon">@pozisyon</button>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="genderDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cinsiyet
+            </button>
+            <div class="dropdown-menu" aria-labelledby="genderDropdown">
+                <button class="dropdown-item filterButton" data-filter="all">Tümü</button>
+                <button class="dropdown-item filterButton" data-filter="ERKEK">Erkek</button>
+                <button class="dropdown-item filterButton" data-filter="KIZ">Kız</button>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="subeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Şube
+            </button>
+            <div class="dropdown-menu" aria-labelledby="subeDropdown">
+                <button class="dropdown-item filterButton" data-filter="all">Tümü</button>
+
+                @{
+                    // Yöneticiden gelen pozisyonları bir diziye topla RAZOR SYNTAX KULLANILIYOR.
+                    List<string> subelistesi = new List<string>();
+                    foreach (var item in Model)
+                    {
+                        if (!subelistesi.Contains(item.adres))
+                        {
+                            subelistesi.Add(item.adres);
+                        }
+                    }
+
+                    // Benzersiz pozisyonları yazdır
+                    <div class="dropdown-horizontal">
+                        @foreach (var sube in subelistesi)
+                        {
+                            <button class="dropdown-item filterButton" data-filter="@sube">@sube</button>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+
+        <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>T.C.</th>
+                    <th>Adres</th>
+                    <th>Cinsiyet</th>
+                    <th>Telefon</th>
+                    <th>Pozisyon</th>
+                    <th>Maaş</th>
+                    <th>Kart Seri No</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr data-position="@item.pozisyon" data-cinsiyet="@item.cinsiyet" data-adres="@item.adres">
+
+                        <td>@item.personelID</td>
+
+                        <td>@item.ad</td>
+                        <td><a href="#">@item.soyad</a></td>
+                        <td>@item.tc<small class="d-block"></small></td>
+                        <td>@item.adres</td>
+                        <td>@item.cinsiyet</td>
+                        <td>@item.telefon</td>
+                        <td>@item.pozisyon</td>
+                        <td>@item.maas</td>
+                        <td></td>
+                        <td class="icon"><a href="/Personel/personelgetir/@item.personelID"> <span class="fa fa-pencil mr-3"></span></a></td>
+                        <td class="icon"><a href="#"><span class="fa fa-trash mr-3" onclick="confirmDelete('@item.personelID')"></span></a></td>
+                        <td class="icon"><a href="/PersonelBilgi/DosyaGetir/@item.personelID"> <span class="fa fa-upload mr-3"></span></a></td>
+                        <td class="icon"><a href="/giriscikis/giriscikis/@item.personelID"> <span class="fa fa-send mr-3"></span></a></td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.bootstrap4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                var table = $('#example').DataTable({
+                    lengthChange: false,
+                    buttons: ['copy', 'excel', 'csv', 'pdf', 'colvis']
+                });
+
+                table.buttons().container()
+                    .appendTo('#example_wrapper .col-md-6:eq(0)');
+            });
+        </script>
+
+
+        <script>
+
+
+
+
+            function confirmDelete(personelID) {
+                if (confirm("Bu kaydı silmek istediğinize emin misiniz?")) {
+                    // Silme işlemini gerçekleştirmek için AJAX isteği gönder
+                    $.ajax({
+                        url: '/Personel/personelsil/' + personelID,
+                        type: 'POST',
+                        success: function (result) {
+                            // Silme işlemi başarılı olduğunda yapılacak işlemler
+                            alert("Silme işlemi başarıyla gerçekleştirildi.");
+                            // Belirli bir sayfaya yönlendirme
+                            window.location.href = '/Firma/firmabilgisi'; // Yönlendirilecek sayfanın URL'si
+                        },
+
+                    }
+                    );
+                }
+            }
+            $(document).ready(function () {
+                // Pozisyon ve cinsiyet menülerini gizle
+                $('.dropdown-menu').hide();
+
+                // Pozisyon düğmesine tıklandığında pozisyon menüsünü aç
+                $('#positionDropdown').click(function () {
+                    $('#positionDropdown + .dropdown-menu').toggle();
+                    $('#genderDropdown + .dropdown-menu').hide();
+                    $('#subeDropdown + .dropdown-menu').hide();
+                });
+
+                // Cinsiyet düğmesine tıklandığında cinsiyet menüsünü aç
+                $('#genderDropdown').click(function () {
+                    $('#genderDropdown + .dropdown-menu').toggle();
+                    $('#positionDropdown + .dropdown-menu').hide();
+                    $('#subeDropdown + .dropdown-menu').hide();
+                });
+
+                $('#subeDropdown').click(function () {
+                    $('#subeDropdown + .dropdown-menu').toggle();
+                    $('#genderDropdown + .dropdown-menu').hide();
+                    $('#positionDropdown + .dropdown-menu').hide();
+                });
+
+                // Tüm personelleri göstermek için "Tümü" butonunu etkinleştir
+                $('.filterButton[data-filter="all"]').addClass('active');
+
+                // Filtreleme butonlarına tıklandığında
+                $('.filterButton').click(function () {
+                    // Butonları temizle
+                    $('.filterButton').removeClass('active');
+                    // Tıklanan butonu etkinleştir
+                    $(this).addClass('active');
+
+                    var filterValue = $(this).data('filter');
+
+                    // Tüm satırları göster
+                    if (filterValue === 'all') {
+                        $('#example tbody tr').show();
+                    } else {
+                        // Filtrelenmemiş satırları gizle
+                        $('#example tbody tr').hide();
+                        // Filtreye uygun olanları göster
+                        $('#example tbody tr[data-position="' + filterValue + '"]').show();
+                        $('#example tbody tr[data-cinsiyet="' + filterValue + '"]').show();
+                        $('#example tbody tr[data-adres="' + filterValue + '"]').show();
+                    }
+                });
+
+                // Arama işlevi
+                $('#searchInput').on('input', function () {
+                    var value = $(this).val().toLowerCase();
+                    $('#example tbody tr').filter(function () {
+                        return $(this).text().toLowerCase().indexOf(value) > -1;
+                    }).show();
+                });
+            });
+
+        </script>
+
+    </div>
+
+
+</body>
+</html>

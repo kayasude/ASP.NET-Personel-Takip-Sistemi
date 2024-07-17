@@ -1,0 +1,112 @@
+﻿
+@model List<EntitiyLayer.Concrete.Entitiy.Log>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="Restorant,menü ">
+
+    <title>Anasayfa</title>
+    <link href="~/Content/Style/assets/css/tablo.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+</head>
+
+<body>
+
+    <div class="content">
+
+        <h2 class="mb-5">Log Bilgileri</h2>
+        <div class="search-container">
+
+            <input type="text" id="searchInput" placeholder="Tabloda ara...">
+
+        </div>
+
+        <div class="">
+
+            <table class="table table-striped custom-table  " id="myTable">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Zaman</th>
+                        <th scope="col">Mesaj</th>
+                        <th scope="col">Yetki Türü</th>
+                        <th scope="col">ID</th>
+
+
+
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @if (ViewBag.AllowAllTables != null && (bool)ViewBag.AllowAllTables)
+                    {
+                        var sortedLogs = Model.OrderByDescending(logbilgi => logbilgi.zaman);
+                        foreach (var logbilgi in sortedLogs)
+                        {
+
+
+
+                            <tr>
+
+                                <td> <a> @logbilgi.zaman</a></td>
+                                <td><a href="#">@logbilgi.mesaj</a></td>
+                                <td> <a> @logbilgi.seviye</a></td>
+                                <td> <a> @logbilgi.kullanıcıID</a></td>
+
+
+
+                            </tr>
+                        }
+
+                    }
+
+                </tbody>
+            </table>
+
+           
+            <script>
+                document.getElementById("searchInput").addEventListener("keyup", function () {
+                    var input, filter, table, tr, td, i, j, txtValue;
+                    input = document.getElementById("searchInput");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td");
+                        for (j = 0; j < td.length; j++) {
+                            if (td[j]) {
+                                txtValue = td[j].textContent || td[j].innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    tr[i].style.display = "";
+                                    break; // Eğer bir eşleşme bulunursa, döngüyü sonlandırın
+                                } else {
+                                    tr[i].style.display = "none";
+                                }
+                            }
+                        }
+                    }
+                });
+
+
+
+
+
+
+
+            </script>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
+
+
+       
